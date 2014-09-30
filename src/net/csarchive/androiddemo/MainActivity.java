@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -22,6 +23,24 @@ public class MainActivity extends ActionBarActivity {
         add = (Button) findViewById(R.id.bAdd);
         sub = (Button) findViewById(R.id.bSub);
         display = (TextView) findViewById(R.id.tvDisplay);
+        add.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				count++;
+				display.setText("Your Total is " + count);
+			}
+		});
+        sub.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				count--;
+				display.setText("Your Total is " + count);
+			}
+		});
     }
 
 
