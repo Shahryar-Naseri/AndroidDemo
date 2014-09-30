@@ -26,4 +26,11 @@ public class Splash extends Activity{
 		timer.start();
 	}
 
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		finish();
+	}
+
 }
