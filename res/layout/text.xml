@@ -8,13 +8,28 @@
         android:id="@+id/et1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:password="true"
         android:hint="@string/etTxt"/>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100" >
 
     <Button
+        android:layout_weight="20"
         android:id="@+id/btn1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/btnTxt" />
+    
+    <ToggleButton 
+        android:layout_weight="80"
+        android:id="@+id/tbtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tv1"
