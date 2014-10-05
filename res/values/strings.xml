@@ -8,7 +8,7 @@
     <string name="btnAdd">Add One</string>
     <string name="btnSub">Subtract One</string>
     <string name="etTxt">Type a Command</string>
-    <string name="btnTxt">Button</string>
+    <string name="btnTxt">Try Command</string>
     <string name="tvTxt1">Invalid</string>
 
 </resources>
