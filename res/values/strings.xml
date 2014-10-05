@@ -7,5 +7,8 @@
     <string name="tvTxt">Your Total is 0</string>
     <string name="btnAdd">Add One</string>
     <string name="btnSub">Subtract One</string>
+    <string name="etTxt">Type a Command</string>
+    <string name="btnTxt">Button</string>
+    <string name="tvTxt1">Invalid</string>
 
 </resources>
