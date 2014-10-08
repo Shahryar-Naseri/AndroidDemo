@@ -3,6 +3,7 @@ package net.csarchive.androiddemo;
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.InputType;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,7 +20,7 @@ public class TextPlay extends Activity{
 		Button btn = (Button) findViewById(R.id.btn1);
 		final ToggleButton tbtn = (ToggleButton) findViewById(R.id.tbtn);
 		final EditText et = (EditText) findViewById(R.id.et1);
-		TextView display = (TextView) findViewById(R.id.tv1);
+		final TextView display = (TextView) findViewById(R.id.tv1);
 		tbtn.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -30,6 +31,23 @@ public class TextPlay extends Activity{
 				}
 				else{
 					et.setInputType(InputType.TYPE_CLASS_TEXT);
+				}
+			}
+		});
+		btn.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				String check = et.getText().toString();
+				if(check.contentEquals("left")){
+					display.setGravity(Gravity.LEFT);
+				}
+				else if(check.contentEquals("center")){
+					display.setGravity(Gravity.CENTER);
+				}
+				else if(check.contentEquals("right")){
+					display.setGravity(Gravity.RIGHT);
 				}
 			}
 		});
