@@ -41,7 +41,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TextPLay"
+            android:name=".TextPlay"
             android:label="@string/app_name" >
         </activity>
     </application>
