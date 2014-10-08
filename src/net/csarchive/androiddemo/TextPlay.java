@@ -1,6 +1,9 @@
 package net.csarchive.androiddemo;
 
+import java.util.Random;
+
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.Gravity;
@@ -40,6 +43,7 @@ public class TextPlay extends Activity{
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				String check = et.getText().toString();
+				display.setText(check);
 				if(check.contentEquals("left")){
 					display.setGravity(Gravity.LEFT);
 				}
@@ -48,6 +52,19 @@ public class TextPlay extends Activity{
 				}
 				else if(check.contentEquals("right")){
 					display.setGravity(Gravity.RIGHT);
+				}
+				else if(check.contentEquals("blue")){
+					display.setTextColor(Color.BLUE);
+				}
+				else if(check.contentEquals("WTF")){
+					Random crazy = new Random();
+					display.setText("WTF!!!");
+					display.setTextSize(crazy.nextInt(75));
+					display.setTextColor(Color.rgb(crazy.nextInt(265), crazy.nextInt(265), crazy.nextInt(265)));
+				}
+				else{
+					display.setText("Invalid");
+					display.setGravity(Gravity.CENTER);
 				}
 			}
 		});
