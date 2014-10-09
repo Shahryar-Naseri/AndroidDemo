@@ -14,16 +14,16 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 public class TextPlay extends Activity{
-
-	@Override
+	
+	Button btn;
+	ToggleButton tbtn;
+	EditText et;
+	TextView display;	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.text);
-		Button btn = (Button) findViewById(R.id.btn1);
-		final ToggleButton tbtn = (ToggleButton) findViewById(R.id.tbtn);
-		final EditText et = (EditText) findViewById(R.id.et1);
-		final TextView display = (TextView) findViewById(R.id.tv1);
+		myMethod();
 		tbtn.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -80,6 +80,13 @@ public class TextPlay extends Activity{
 				}
 			}
 		});
+	}
+	private void myMethod() {
+		// TODO Auto-generated method stub
+		btn = (Button) findViewById(R.id.btn1);
+		tbtn = (ToggleButton) findViewById(R.id.tbtn);
+		et = (EditText) findViewById(R.id.et1);
+		TextView display = (TextView) findViewById(R.id.tv1);
 	}
 
 }
