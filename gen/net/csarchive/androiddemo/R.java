@@ -1210,9 +1210,10 @@ containing a value of this type.
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_main=0x7f030018;
         public static final int email=0x7f030019;
-        public static final int splash=0x7f03001a;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
-        public static final int text=0x7f03001c;
+        public static final int photo=0x7f03001a;
+        public static final int splash=0x7f03001b;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001c;
+        public static final int text=0x7f03001d;
     }
     public static final class menu {
         public static final int main=0x7f0d0000;
