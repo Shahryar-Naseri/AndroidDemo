@@ -2,6 +2,7 @@ package net.csarchive.androiddemo;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.widget.SimpleCursorAdapter.ViewBinder;
 import android.view.View;
@@ -16,6 +17,7 @@ public class Camera extends Activity implements View.OnClickListener{
 	Button b;
 	Intent i;
 	final static int cameraData = 0;
+	Bitmap bmp;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -50,4 +52,14 @@ public class Camera extends Activity implements View.OnClickListener{
 		
 	}
 
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		if(resultCode == RESULT_OK){
+			Bundle extras = data.getExtras();
+			bmp = (Bitmap) extras.get("data");
+			iv.setImageBitmap(bmp);
+		}
+	}
 }
